@@ -17,13 +17,13 @@ CREATE TABLE pessoa(
 );
 
 CREATE TABLE pessoaFisica(
-	idPessoa INT NOT NULL,
+	idPessoa INT PRIMARY KEY NOT NULL,
 	cpf VARCHAR(11) NOT NULL,
 	FOREIGN KEY (idPessoa) REFERENCES pessoa(idPessoa)
 );
 
 CREATE TABLE pessoaJuridica(
-	idPessoa INT NOT NULL,
+	idPessoa INT PRIMARY KEY NOT NULL,
 	cnpj VARCHAR(14) NOT NULL,
 	FOREIGN KEY (idPessoa) REFERENCES pessoa(idPessoa)
 );
